@@ -60,12 +60,15 @@
   font-family: 'Space Grotesk', sans-serif;
   color: white;
 }
-
+body {
+    background: linear-gradient(145deg, white, moccasin);
+    background-attachment: scroll; /* Change from fixed to scroll */
+    background-size: cover; /* Ensures it covers the full viewport */
+    background-position: center; /* Centers the background */
+}
 body { 
 	font-family: 'Inter';
-	background-color: moccasin;
-	background: linear-gradient(145deg,white,moccasin);
-	background-attachment: fixed;
+
 	font-weight: 400;
     line-height: 1.7;
 	color: black;
