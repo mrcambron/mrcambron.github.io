@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@100..900&display=swap');
 
+@font-face {
+	font-family: "clacon"; 
+	src: url('/assets/clacon2.woff2') format('woff2');
+}
 :root {
 	font-size: 18px;
 }
@@ -68,7 +72,7 @@ body {
 	padding: 4rem 0;
 }
 
-h1, .subtitle, .banner, h2, h3, h4 { 
+h1, .subtitle, h2, h3, h4 { 
 	font-family: 'Space Grotesk', sans-serif;
 	font-weight: 600;
 	line-height: 1;
@@ -77,12 +81,41 @@ h1, .subtitle, .banner, h2, h3, h4 {
     letter-spacing: 0.5px; /* Adds a sleek touch */
 }
 
-h1 { font-size: 3rem; line-height: 1; margin: 1rem; text-shadow: 5px 5px gainsboro;  }
-.subtitle { font-size: 1.5rem; text-align: right; margin: -1rem 1rem 0.5rem 1rem;  }
-.banner { font-family: monospace; font-size: 2.5rem; text-align: center; margin: 2.5rem 1rem; padding: 15px 10px 10px 10px; background-color: goldenrod; color: white; text-shadow: 3px 3px gold;}
-h2 { font-size: 2rem; margin: 0 0.5rem 1rem 1rem; padding-top: 3.5rem; }
-h3 { font-size: 1.5rem; margin: 1.5rem 0.5rem 0.5rem 1.5rem;  }
-h4 { font-size: 1.25rem; margin: 1.5rem 1.5rem 0.5rem 1.5rem; position:relative; padding-left: 90px; }
+h1 { 
+	font-size: 3rem; 
+	line-height: 1; 
+	margin: 1rem; 
+	text-shadow: 5px 5px gainsboro;  
+}
+.subtitle { 
+	font-size: 1.5rem; 
+	text-align: right; 
+	margin: -1rem 1rem 0.5rem 1rem;  
+}
+.banner a{ 
+	font-family: 'clacon', monospace; 
+	font-size: 1rem; 
+	text-align: center; 
+	margin: 10rem 1rem; 
+	padding: 15px 10px 10px 10px; 
+	color: cornsilk; 
+	text-shadow: 3px 3px purple;}
+	
+h2 { 
+	font-size: 2rem; 
+	margin: 0 0.5rem 1rem 1rem; 
+	padding-top: 3.5rem; 
+}
+h3 { 
+	font-size: 1.5rem; 
+	margin: 1.5rem 0.5rem 0.5rem 1.5rem;  
+}
+h4 { 
+	font-size: 1.25rem; 
+	margin: 1.5rem 1.5rem 0.5rem 1.5rem; 
+	position:relative; 
+	padding-left: 90px; 
+}
 h4::before {
 	content:" ";
 	height: 4px;
@@ -109,8 +142,14 @@ textarea { display: block; margin: 1.5rem auto; font-size: 0.9em; max-width: 100
 code, textarea { color: black; background-color: white; font-family: courier, monospace; }
 strong { font-size: 1.15em; }
 
-a { color: blue; text-decoration-style: dotted; text-underline-offset: 0.2rem; }
-a:hover { box-shadow: inset 0 -5px gainsboro; }
+a { 
+	color: blue; 
+	text-decoration-style: dotted; 
+	text-underline-offset: 0.2rem; 
+	}
+a:hover { 
+	box-shadow: inset 0 -5px gainsboro; 
+	}
 
 .flex {
 	display: flex;
