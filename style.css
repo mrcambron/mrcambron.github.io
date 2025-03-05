@@ -62,7 +62,7 @@
 }
 body {
     background: linear-gradient(145deg, white, moccasin);
-    background-attachment: scroll; /* Change from fixed to scroll */
+    background-attachment: fixed; /* Change from fixed to scroll */
     background-size: cover; /* Ensures it covers the full viewport */
     background-position: center; /* Centers the background */
 }
