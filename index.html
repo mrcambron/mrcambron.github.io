@@ -1,0 +1,423 @@
+<!--  
+           .      =@=                                        
+  :-*%@@#-..        .+*.                  ...                
+         ..+%*:.       :*.              .-##-                
+              .=#-.      -=.           :*. .*       ..::--.  
+                .:*+....:-=#:.       .=-   .*    .=+=.   .#. 
+            .:#@@@@@@@@@@+.#@@+--.   -.    :: -+-.       +-. 
+           -@@@@@*+@@@@@@%@@@@@=-=**-:    .**-.        .+-   
+          =@@@*=-+@@@@@@@@@@@@@*----#:   .=:.         :*.    
+         .@@=+=--%@@@@@@@@@@@@@=-----#. -:.         .+:.     
+         :**=----@@@@@@@@@@@@@*--*=--+.=.         :-...*.    
+        ==#------*@@@@@@@@@@%-*=.----*-   =#=.        #-     
+      .==*--------+@@@@@@@+=*...*----*::*--*-*.=+...==       
+      -=+---------------=+:.++=---+@%=----=+*:   .#:         
+     .**=-------------=*-*=-----*@@#-------*#=..-+--++.      
+     -*%------------=*=------=#@@@@%----=++.  .:+-----*      
+     =*#----------++------=#@@@@@@@@@*=#@%+=. .+==---=:      
+     .#%-------+*=----=*%@@@@@@@@@@@@@@@@%-=+   .-*-=*.      
+      :#=--+#+=*#*#@@@@@@@@@@@@@@@@@@@@@@=--@#.   .--.       
+       .::.. .==----+=*%@@@@@@@@@@@@@@@%---=@@%. ..          
+           .#=#+=---+.      ...-#@@@@*=----#@@@-             
+           :  .*---#*:        .##--------=@@@@@:             
+           =..++---#-.        .@@@@%##%@@@@@@@%.             
+            =++==*#*.        .+=@@@@@@@@@@@@@+=:             
+                             +=--=#@@@@@@@%+--=.             
+                             :%--------------=+.             
+                            .%@@#=----------#-               
+                            .+@@@@@%#++++#%=.                
+                              *@@@@@@@@@@@-                  
+                             .*-+@@@@@@+..                   
+                            .*=--*#:.                        
+                            +==%:.                           
+
+	Welcome to the source code!
+	Everything between the `<! --` and `-- >` here is a comment;
+	it doesn't get displayed on the final page and is only viewable in the source code.
+
+	You can use comments to write notes for yourself about how bits of code work,
+	remove bits of code you don't want to display now but might want later,
+	or leave hidden messages for those who inspect your source code, like I'm doing here.
+
+-->
+<!-- Nothing in the head shows up on the website, it just tells the browser how to interpret the HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Welcome to Website Building 101</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<!-- This is where people start to see what you put here -->
+<body>
+
+	<main>
+	<!-- The picture of my head and site title -->
+  <table>
+  <tr>
+  	<td><svg height="6em"; xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 515"><defs><style>.cls-1,.cls-12{fill:#c3bd5e;}.cls-1,.cls-10,.cls-11,.cls-12,.cls-13,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#231f20;stroke-miterlimit:10;}.cls-1,.cls-13,.cls-2,.cls-3,.cls-4{stroke-width:8.12px;}.cls-2{fill:#f5e0cd;}.cls-3{fill:#fff;}.cls-10,.cls-11,.cls-14,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;}.cls-5{stroke-width:7.84px;}.cls-6{stroke-width:8px;}.cls-7{stroke-width:8.25px;}.cls-8{stroke-width:7.9px;}.cls-9{stroke-width:7.85px;}.cls-10{stroke-width:7.69px;}.cls-11{stroke-width:8.21px;}.cls-12{stroke-width:8.83px;}.cls-13{fill:#231f20;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-1" d="M374.64,236.47s9.13-9.14,9.13-54.79-9.13-54.79-45.66-82.19-145-25-172.44-6.74-58.47,88.88-49.34,189.33c0,0,17.34,15.34,36,49.34Z"/><path class="cls-1" d="M164.61,282.13l-25.89,80.13S234.34,437.58,280,437.58s100-57,100-57l-27-71.5Z"/><path class="cls-2" d="M159.35,254.17c.32-8.33,2-19.62-13.87-21.25-8.06-.83-17.07,4.39-18.63,17.83,0,0,0,9.28,0,9.31s-.82,23.9-.84,24c-2.33,11.84,12.29,21.07,13.83,24.83l.1.25c4.06,10,18.89,7.15,19-3.62Z"/><path class="cls-2" d="M356.38,236.47s8.43-9.15,18.26,0v45.66s0,9.13-18.26,9.13Z"/><path class="cls-3" d="M146.33,341.47c-.19-.34-.38-.68-.56-1"/><path class="cls-4" d="M383,200.18s.78,8.89-8.35,18-18.26,9.13-18.26,9.13"/><line class="cls-4" x1="192" y1="326.08" x2="192.24" y2="397.02"/><polyline class="cls-4" points="210.27 364.31 210.27 354.08 210.27 409.97"/><line class="cls-4" x1="228.53" y1="370.08" x2="228.53" y2="419.1"/><line class="cls-4" x1="246.79" y1="385.58" x2="246.79" y2="428.23"/><line class="cls-4" x1="265.06" y1="397.08" x2="265.06" y2="437.36"/><line class="cls-4" x1="283.32" y1="399.58" x2="283.32" y2="437.36"/><line class="cls-4" x1="301.59" y1="400.08" x2="301.59" y2="433.08"/><line class="cls-4" x1="319.85" y1="386.08" x2="319.85" y2="428.23"/><line class="cls-4" x1="338.11" y1="367.58" x2="338.11" y2="414.08"/><line class="cls-4" x1="173.74" y1="315.08" x2="173.72" y2="385.09"/><path class="cls-5" d="M164.85,219.51s-5.5-8.93-24.35-8.93-25.83,14.5-25.83,14.5"/><path class="cls-4" d="M164.61,190.81s-10.18-9.17-24.88-8.14c-9.11.64-20.78,8.14-20.78,8.14"/><path class="cls-6" d="M164.61,172.54s-5.69-12.09-21.47-12.44c-11.34-.26-19.47,8.37-19.47,8.37"/><path class="cls-4" d="M164.61,145.15s-6.11-8.39-15.24-8.39-18.26,6.09-18.26,6.09"/><path class="cls-4" d="M182.87,126.89s-8.88-9.08-17.77-11.18c-8.64-2-19,.76-19,.76"/><path class="cls-7" d="M210.27,126.89c-3.36-2.56,1.73-18.68-9.5-30.67-10-10.67-26.44-7.72-26.44-7.72"/><path class="cls-8" d="M237.71,126.89s4.73-15,0-26.6c-5.21-12.82-22-20.21-22-20.21"/><path class="cls-9" d="M265.12,126.89s3.58-14.6,0-26.61C261.44,88,248,79.08,248,79.08"/><path class="cls-10" d="M292.53,126.89s2.65-14.13,0-26.17C290.13,89.8,277,81.08,277,81.08"/><path class="cls-11" d="M319.8,126.89s2.83,1.93,0-17.91a37.29,37.29,0,0,0-12.47-22.9"/><path class="cls-4" d="M338.11,136s8-9.2,9.13-18.27a20.94,20.94,0,0,0-3.31-14"/><path class="cls-4" d="M353.33,153.08s10.13-11,12.18-17.06c1.85-5.5,2-13,2-13"/><path class="cls-4" d="M353.33,180.42c8.1-2.3,18.22-11,21-14.49a25.78,25.78,0,0,0,5.83-19.28"/><path class="cls-4" d="M347.67,206.75s14.31-.9,24.92-10.89c4.31-4.05,10.91-12.68,10.91-12.68"/><path class="cls-2" d="M160.61,225.33v73.06s37.06,51,127.06,52.36c36.52.54,64.83-45.17,64.83-45.17,0,9.13-.12-80.25-.12-80.25V152.28s-9.14-27.39-36.53-27.39H188s-27.39,0-27.39,18.26Z"/><path id="Eyebrow" class="cls-4" d="M210.27,218.2c18.26-9.13,54.79,0,54.79,0"/><path class="cls-12" d="M254.25,294.58s-36.25,4.67-44,42.34h137c.32,0-10-42.18-31-41.84Z"/><line class="cls-4" x1="246.79" y1="318.83" x2="246.79" y2="336.92"/><line class="cls-4" x1="265.06" y1="318.65" x2="265.06" y2="336.92"/><line class="cls-4" x1="283.32" y1="318.65" x2="283.32" y2="336.92"/><line class="cls-4" x1="301.59" y1="318.65" x2="301.59" y2="336.92"/><line class="cls-4" x1="319.85" y1="318.65" x2="319.85" y2="336.92"/><circle class="cls-13" cx="233.1" cy="241.03" r="4.57"/><circle class="cls-13" cx="324.41" cy="241.03" r="4.57"/><line class="cls-4" x1="356.38" y1="346.05" x2="356.38" y2="400.84"/><path class="cls-4" d="M356.38,218.2c-18.27-9.13-54.79,0-54.79,0"/><line class="cls-13" x1="155.48" y1="313.58" x2="155.48" y2="373.44"/><rect class="cls-14" width="500" height="515"/><path class="cls-2" d="M274.19,236.47V273s-18.26,9.14-18.26,18.27-1.29,12.82,7.84,12.82,1.78-4.47,10.91-4.47,3.55,4.73,12.68,4.73,3.05-4.73,12.94-4.73c7.36,0,2.79,4.22,10.42,4.49,9.12.32,10.89-5.5,10.89-5.5a21.87,21.87,0,0,0-1.78-8.37c-2.37-5.08-17.75-16.24-17.75-16.24"/></g></g></svg></td>
+  	 <td style="
+  	font-family: 'Space Grotesk', sans-serif;
+  	font-weight: bold;
+  	font-size: 1.5em;
+  	color: #333;
+  letter-spacing: 0.5px; /* Adds a sleek touch */
+  ">ajcambron.github.io</td>
+  	 </tr>
+  	 </table>
+	<!-- My site navigation, it gets styled with the div class "nav" -->
+	<div class="nav">
+<ul>
+  <li><a href="index.html">Creating a Basic Website</a></li>
+  <li><a href="photo.html">Photography</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>	
+    </div><br>
+    <!-- My page title -->
+    		<h1 >🖥️ Creating a Basic Website</h1>
+				<p>These instructions are a remix of information published originally at<a href="https://ribozone.github.io/artsite/"> Ribozone.github.io</a></p>		
+		<h2>✅ What you need </h2>
+			<ul>
+				<li>A computer with a text editor</li>
+					<ul>
+						<li>The default text editor included with your operating system (Notepad on Windows and TextEdit on Mac) is all you need to make a website, though there are plenty of more complex options. I use <a href="https://coteditor.com/">CotEditor</a>. It's easy to switch between them until you find something you like, so don't worry about picking the "right" one.</li>
+					</ul>
+				<li>Some images files you'd like to put on a website</li>
+					<ul>
+						<li>This one's optional; you can work with placeholder images if you don't have the files ready.</li>
+					</ul>
+			</ul>
+			
+		<h2  id="intro">1️⃣ Introduction</h2>
+			<p>Hi. I have no certifications to teach web-design, but I have been making websites in various formats since the mid 1990s.</p>
+			<p> When I was pre-teen we built webpages on <code>Geocities.com</code> and in high school we customized the themes of <code>Myspace.com</code>. I took a class entitled <code>TEL-284 INTRO TO INTERACTIVE MEDIA</code> in the Fall of 2009 where I first learned to create a website in HTML and CSS. As part of that class, I ended up developing my first website using <a href="https://wordpress.com/">Wordpress</a>, and never looked back until this year...</p>
+			<p> <strong>However,</strong> recent changes to the availability of HTML/CSS tools, layout builders and
+<!-- This is a style I had ChatGPT make for me, and then I modified to fit my site better-->
+			<span style="
+        font-family: 'Unbounded', sans-serif;
+        color: black;
+        text-shadow: 0 0 5px #0f0, 0 0 10px #00ff00, 0 0 20px #007700;
+        display: inline-block;
+        position: relative;
+        animation: flicker 1.5s infinite alternate, glitch 0.3s infinite;
+    ">
+        ChatGPT
+    </span>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+<!-- End of Goofy ChatGPT CSS-->
+make it too easy to decode and code your own website by hand. Additionally, static websites (websites that don't run code like php or javascript) are much less susceptible to attacks from hackers.</p> 
+			<p>I am currently rewriting my personal website using the <a href="https://gohugo.io/">HUGO</a> framework, which uses the GO language, markdown, and CSS! No complicated site builder, just code!</p>
+			
+			<h3>Why make a website by hand?</h3>
+				<h4>🎨 Save money by not paying for stuff you don't own</h4>
+					<p>Squarespace, Wix, Cargo, etc are all <strong style="text-transform:uppercase;">too expensive</strong> and you don't even own your site! They "own" their templates, so they prevent you from exporting your site and taking the files somewhere else. Most web hosting is not like that! When you make your site yourself, you can easily upload it to another host when whatever one you're using goes down or makes a policy decision you don't agree with. Squarespace <i>et al.</i> want you to believe that coding your own site is too hard, so you'll keep giving them money. <strong>Stop giving them money!</strong></p>
+				<h4 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px cornsilk, 0 0 25px goldenrod;">🎨 Enjoy total creative freedom</h4>
+					<p>Your art and design work is unique to you, so why shouldn't your website be? When you build it from scratch, you can make your site have any layout and any style you can dream of. If you wonder "can I make a webpage do this?", usually the answer is I can!</p>
+				<h4>🧠 Learn something new (and fun?!)</h4>
+					<p>Learning HTML and CSS is a great way to get more comfortable with code. It's not programming, but for a lot of people it's a first step towards learning to program. Even if you have no interest in coding, it's good to learn a new skill. <code>ᕙ(◕ل͜◕)ᕗ</code> </p>
+					<p> As a teacher I modify and use HTML code all the time when designing quizzes/assignments on Schoology.</p>
+					<p>Also, I think it's fun. :)</p>
+					
+	<!-- Not all of my comments are valuable, just like in real life. -->				
+					
+			<h3>Some inspiring basic HTML websites</h3>
+				<ul>
+					<li>[List to be populated during the workshop]</li>
+					<li><a href="https://tutor.0b.ee/">tutor.0b.ee</a></li>
+					<li><a href="https://www.berkshirehathaway.com/">berkshirehathaway.com</a></li>
+					<li><a href="https://text.npr.org/">text.npr.org</a></li>
+				</ul>
+		<h2 id="start">2️⃣ Create a GitHub Account and Repository</h2>
+					<h3>Creating a GitHub Account</h3>
+			            <p><input type="checkbox"> Create a new account on GitHub using your personal email account
+			            </br> <strong style="color:red";>DO NOT USE YOUR SCHOOL EMAIL</strong></p>
+			        <h3>Create a repository</h3>
+			            <p><input type="checkbox"> Create a new repository on GitHub that follows the naming convention: <code>githubsername.github.io</code></p>
+			            <p><strong>If you do not name the repository correctly you will need to rename the repository</strong></p>
+							
+		<h2 id="start">3️⃣ Getting started with HTML code</h2>
+			<p>Your website is going to start as files on your computer, then you'll put them online at the end of the workshop. Let's make some files!</p>
+			
+			<h3>Files and folders</h3>
+				<p><input type="checkbox"> <strong>Make a new folder in your Digital Design Folder.</strong> This will become your website! In order to stay organized, name the folder <code>username.github.io</code> so that it matches the name of your GitHub directory. If you're reading a guide online and it mentions the "root" or "root folder" or "top-level directory", this is the folder it's referring to.</p>
+				<p><input type="checkbox"> <strong>Open your text editor, create a new document, and save it as <code>index.html</code>.</strong> This will become the first page people see when they visit your website.</p>
+				<p><input type="checkbox"> <strong>Create another new document, and save it as <code>style.css</code>.</strong> This is where you'll change how <code>index.html</code> (and any other page you make) will look.</p>
+				<p><input type="checkbox"> <strong>Create a new folder within the first one. Put the images you want to share on your site in this folder.</strong> This is optional, but it keeps things organized. The folder can have any name; some popular choices are "img", "assets", etc.</p>
+				<p><small><strong>Note:</strong> <em>Ideally, folder and file names <strong>should never include spaces</strong>. 
+				They get rendered as <code>%20</code> in the address bar and <strong>I think it looks bad ಠ_ಠ </strong></small></em></p>
+				
+			<h3>Tools</h3>
+				<p>Before we start <em>writing</em> code, let's <em>read</em> some. Safari (Chrome at school has this funcionality blocked) has tools to view the source code of any web page you visit. When you're on a site that's doing something you like and you're wondering how they did it, check out the code!</p>
+				<h4>Enable Web Developer Tools</h4>
+					<p><input type="checkbox"> <strong>Go to Safari>Settings>Advanced.</strong> Enable Web Developer Tools.</p>
+									
+				<h4>View source: ⌥ ⌘ U (Mac)</h4>
+					<p>Like the name suggests, this will take you straight to the code of the HTML document you're currently viewing, as it was written. It can more or less useful depending on the site you're on. Pages written by hand are typically legible to other human beings, while code generated by a program can be pretty obscure.</p>
+					<p><input type="checkbox"> <strong>View the source of the Google Doodle page.</strong></p>
+					<p><input type="checkbox"> <strong>View the source of this page.</strong> I tried to keep it nice and organized.</p>
+				<h4>Inspect element: ⌥ ⌘ I (Mac)</h4>
+					<p>Even when the source code appears to be nonsense, the inspect tool can clear things up by displaying the page and the code side by side. Hovering over a piece of code (an HTML "element") will highlight the corresponding element on the page, and clicking on an element will show the CSS styling that's being added to it.</p>
+					<p><input type="checkbox"> <strong>Inspect an element on the Google Doodle page.</strong></p>
+					<p><input type="checkbox"> <strong>Inspect an element on this page.</strong></p>
+					<p>What you see here may not make sense to you now, but hopefully will become more clear after the following sections on HTML and CSS. Also, the inspector interface looks different across browsers, so you may need to look up a guide for your specific browser if you're getting lost.</p>
+				<p><small><strong>Note:</strong> <em>You can also access view source and inspect element by right clicking. Another way to access the source code is by typing "<code>view-source:</code>" into the address bar before the "<code>https://</code>" (I've even done this on my phone, when I <b>really</b> wanted to see).</small></em></p>				
+				
+		<h2 id="HTML">4️⃣ HTML = <u>h</u>yper<u>t</u>ext <u>m</u>arkup <u>l</u>anguage</h2>
+			<p>HTML is the structure and content of every webpage. It's made up of "elements", the things you inspected in the last section. Elements are defined by tags, which are enclosed in angled brackets, &lt; and &gt;.</p>
+			<p style="text-align:center;">
+				An HTML element:</br>
+				<code><b>&lt;p&gt;</b>This is a paragraph.<b>&lt;/p&gt;</b></code><br>
+				start tag &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end tag</br>
+				<!-- Using &nbsp; like this is not the best way to space things out, but sometimes it gets the job done. -->
+			</p>
+			<p>Most elements require both a start and an end tag (which includes a forward slash <code>/</code>). A notable exception is the <code>&lt;img&gt;</code> tag, which can stand alone. Your page may behave in unexpected ways if you forget to close a tag, but it's usually easy to spot and fix.</p>
+			<p>To add things to a page, add an element! This page is mostly made up of headings <code>&lt;h1&gt;–&lt;h6&gt;</code>, paragraphs <code>&lt;p&gt;</code>, and unordered lists <code>&lt;ul&gt;</code>. HTML elements can be nested within other elements, but take care to close the inner element before closing the outer element. For example:</p>
+			<p style="text-align:center;"><code>&lt;p&gt;I &lt;b&gt;love&lt;/b&gt; HTML.&lt;/p&gt;</code> is valid, but</p>
+			<p style="text-align:center;"><code>&lt;p&gt;I &lt;b&gt;love HTML.&lt;/p&gt;&lt;/b&gt;</code> is not.</p>
+			
+			<h3>A minimal webpage</h3>
+				<p><input type="checkbox"> <strong>Copy the following code and paste it into your <code>index.html</code> file.</strong></p>
+				<!-- If you are feeling crazy, you could just copy all of my code and slowly edit it into something else. I personally enjoy this kind of franken-coding, but it's not for everyone -->
+<textarea style="width: 800px; height:220px;">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Welcome to my cool new website</h1>
+  </body>
+</html></textarea>
+				<p><code>&lt;!DOCTYPE html&gt;</code> tells the browser to expect an html document.</p>
+				<p><code>&lt;html&gt;</code> is the container for the entire page. <code>lang="en"</code> specifies that the page is written in English. You should change it to a different <a href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">two letter language code</a> if your site in another language.</p>
+				<p><code>&lt;head&gt;</code> contains the site's metadata. Some sites will have a LOT of metadata, but this is all you need to get started.</p>
+				<p><code>&lt;title&gt;</code> is the text that will display in a browser tab with your site open.</p>
+				<p><input type="checkbox"> <strong>Change the text in the <code>&lt;title&gt;</code> tag to the name of your site.</strong></p>
+				<p><code>&lt;meta charset="UTF-8"&gt;</code> sets the character encoding. UTF-8 covers every <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode character</a>. </p>
+				<p><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</code> makes it so your page doesn't look really tiny on phone screens. You can remove it, but I recommend keeping it in.</p>
+				<p><code>&lt;link href="style.css" rel="stylesheet" type="text/css" media="all"&gt;</code> connects your page to the stylesheet file that you created in the previous section.</p>
+				<p><code>&lt;body&gt;</code> contains everything that actually displays on the page when you view it.</p>
+				<p><code>&lt;h1&gt;</code> is the highest level section heading. On a site's index page, this usually contains the site title, while on other pages, it will contain the name of that page.</p>
+				<p><input type="checkbox"> <strong>Change the text in the <code>&lt;h1&gt;</code> tag to the name of your site.</strong></p>
+				<p><input type="checkbox"> <strong>Save your changes, then open your <code>index.html</code> file in the browser.</strong></p>
+
+			<h3>Important tags</h3>
+				<p>We're here to share art, so arguably the most important tag is the <code>&lt;img&gt;</code> tag. The whole tag will look something like <code>&lt;img src="example.png"&gt;</code>, where the value in the <code>src</code> attribute is the path to the image file you want to display. If the file is in the <em>same folder</em> as the HTML file you're writing, the path is simply the name of the image file. If you set up your site like I recommended earlier, with all of your images in a folder, the file path will <em>include the name of that folder</em> and look something more like <code>&lt;img src="assets/example.png"&gt;</code>.</p>
+				<p><input type="checkbox"> <strong>Add an image (or several) to <code>index.html</code> and view the page.</strong></p>
+				<p>(Optional) If you want to add captions, there's an HTML element for that!</p>
+				<textarea style="width:500px; height:100px;">
+<figure>
+  <img src="assets/example.png">
+  <figcaption>Example caption</figcaption>
+</figure></textarea>
+				<p>Another critically important tag ifs the link, or anchor element:</p>
+				<pre><code>&lt;a href="https://example.com"&gt;Example&lt;/a&gt;</code></pre>
+				<p><code>a</code> stands for anchor and <code>href</code> stands for hyperlink reference, which is the destination of the link. The text between the start and end tags is what will display on the page. There are two types of links:</p>
+				<ul>
+					<li>Relative links are links between files on your own website. To get to a page in the root folder named <code>about.html</code> from the index page, you'd use <code>href="about.html"</code>. If the page is within a folder, for example a folder made up of blog posts, you'd navigate to it with something like <code>href="blog/examplepost.html"</a></code>. If you want to navigate <em>from</em> a page within a folder <em>back out</em> to the index page of the folder that contains it, you'd use <code>"href="../index.html""</code>. More info on <a href="https://www.w3schools.com/html/html_filepaths.asp">relative file paths</a>. </li>
+					<li>Absolute links are links to other websites. For these to work, you have to include the full URL, including the <code>https://</code>.</li>
+				</ul>
+				<p><input type="checkbox"> <strong>Add a link to <code>index.html</code> and test that it works.</strong> Your site doesn't have any other pages yet, so it should be an absolute link.</p>
+				<p>Images, links, headings, and paragraphs are all you really need to build a satisfying portfolio site, but here's a list of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">every HTML element</a> for your reference.</p>
+			
+		<h2 id="CSS">5️⃣ CSS = <u>c</u>ascading <u>s</u>tyle <u>s</u>heets</h2>
+			<p>CSS changes the appearance of the page. Color, font, size, margins, and more can be changed for every HTML element. A CSS declatarion is formatted like this:</p>
+			<pre><code>selector {
+  property: value;
+}</code></pre>
+<p>where the selector is the HTML element you're adding style to, the property is <em>what</em> you want to change (color, font, size, margins, etc), and the value is <em>how</em> you want to change it (which depends on the property). For example,</p>
+			<pre><code>p {
+  background: black;
+  color: white;
+  font-size: 50px;
+}</code></pre>
+			<p>will change the background color to black, the text color to white, and increase the font size for all of the text within any paragraph tag.</p>
+			<p><input type="checkbox"> <strong>Copy the following code and paste it into your <code>style.css</code> file.</strong></p>
+			<textarea style="width:200px;height:75px;">
+body {
+  color: black;
+  background: white;
+}</textarea>
+			<p><input type="checkbox"> <strong>Change the text and background colors.</strong></p>
+			<p><small><strong>Note:</strong> <em>For color, you can use HEX codes, RGB values, or <a href="https://htmlcolorcodes.com/color-names/">named colors</a>.</small></em></p>
+			<p>There are <a href="https://www.w3schools.com/cssref/index.php">too many CSS properties</a> to list them all here. I've been doing this for a year and a half and I'm still learning new things about CSS all the time. This is the point where using the inspect tool to look at the style of webpages you like becomes very useful for learning about what's possible.</p>
+			
+			<h3>Classes</h3>
+				<p>If you only want to apply a style a specific element, and not every element of the same type, you can assign that specific element a "class" in the HTML. Using an example from the top of this page,</p>
+				<pre><code>&lt;p class="banner"&gt;11AM - 1PM on June 30th at Volume Two&lt;/p&gt;</code></pre>
+				<p style="text-align:center;">is styled with</p>
+				<pre><code>.banner { 
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 2.5rem 1rem;
+  padding: 15px 10px 10px 10px;
+  background-color: blue;
+  color: white;
+}</code></pre>
+				<p>The period specifies that the CSS declaration is meant to be applied to a class. You can name the class whatever you want, as long as there are no spaces. Something short and descriptive works best.</p>
+			
+			
+		<h2 id="images">6️⃣ Images on the web</h2>
+			<p></p>
+			
+			<h3>Resizing and compression</h3>
+				<p>It's a bad idea to put high-resolution images on your website for two reasons:</p>
+				<ol>
+					<li>You will run out of space on free web hosts very quickly.</li>
+					<li>Your pages will load very slowly.</li>
+				</ol>
+				<p>Even after resizing your images, more can be done to reduce the file size. </p>
+				<ul>
+					<li>Windows: <a href="https://css-ig.net/pinga">pinga</a></li>
+					<li>Mac: <a href="https://imageoptim.com/mac">ImageOptim</a></li>
+					<li>Web-based: <a href="https://tinypng.com/">tinyPNG</a> (free version has a daily limit)</li>
+				</ul>
+				
+			<h3>Alt Text</h3>
+				<p>Alternative, or "alt", text is a written description of an image, which is read aloud by <a href="https://en.wikipedia.org/wiki/Screen_reader">screen readers</a> and displayed on the page if the image cannot load. Alt text is included within the <code>&lt;img&gt;</code> tag, as follows:</p>
+				<textarea style="width: 300px; height:50px;"><img src="example.png" alt="example alt text"></textarea>
+				<p>For decorative images, alt text should be blank. Not <em>absent</em>; include <code>alt=""</code>.</p>
+				<p>For images that used for navigation, the alt text should descibe the link destination instead of what the image looks like.</p>
+				
+			<h3>Responsive webpages</h3>
+				<p>One of the most common reasons a site will appear "broken" is that images are oveflowing their parent element, or even the entire screen (especially on phones). Luckily, there's an easy fix:</p>
+<textarea style="width: 200px; height:75px;">
+img { 
+  max-width: 100%;
+}</textarea>
+
+		<h2 id="galleries">7️⃣ Creating gallery layouts</h2>
+		
+			<h3>Sketching rectangles</h3>
+				<p><input type="checkbox"> <strong>Visit a portfolio site you admire, or one of the sites shared be in the introduction. Open the inpector tool. Add the CSS declatation <code> * { border:solid; }</code> to put a border around every single HTML element.</strong></p>
+				<p><input type="checkbox"> <strong>With a pen and paper, sketch out a layout for your site using only rectangles.</strong></p>
+				
+			<h3>Flexbox and grid</h3>
+				<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guide to Flexbox</a></p>
+				<p><a href="https://grid.layoutit.com/">CSS Grid Generator</a></p>
+			
+		<h2 id="hosting">8️⃣ Putting your site online</h2>
+		
+			<h3>Free web hosts</h3>
+				<h4>Github Pages</h4>
+					<p>This site is hosted on Github Pages!</p>
+					<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#usage-limits">GitHub Pages -  Usage Limits</a></p>
+
+				<h4>Other options</h4>
+					<p></p>
+					<p><a href="https://kalechips.net/stuff/hosting">Web host list for hobbyists</a></p>
+					
+			<h3>✨optional✨ Getting a custom domain</h3>
+				<p>This part isn't free, unfortunately, but it's less expensive than you might have realized. You can get a .com, .net or a .org domain for about $10-$12 per <strong>year</strong>, less than a single <strong>month</strong> of Squarespace's least expensive plan. (When they offer you one year of free domain registration like it's a great deal, they're ripping you off!)</p>
+				<p>I buy my domains from <a href="https://www.namecheap.com/">Namecheap</a>, and I have no complaints.
+				
+		<h2 id="more">📚 Learning more</h2>
+			<p></p>
+		
+			<h3>"Homework" AKA Things You Might Want to Add to Your Site but I Didn't Have Time to Go Over</h3>
+				<ul>
+					<li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Custom fonts</a></li>
+					<li><a href="https://www.w3schools.com/html/html_favicon.asp">Favicons</a></li>
+					<li><code><a href="https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt">Robots.txt</a></code></li>
+					<li>Giving links <code><a href="https://www.w3schools.com/cssref/sel_hover.php">:hover</a></code> and <code><a href="https://www.w3schools.com/cssref/sel_focus.php">:focus</a></code> styling</li>
+				</ul>
+			
+			<h3>Web 1.0 stuff</h3>
+				<ul>
+					<li><a href="https://patorjk.com/software/taag/">ASCII Text Generator</a></li>
+					<li><a href="https://www.asciiart.eu/image-to-ascii">ASCII Image Converter</a></li>
+				</ul>	
+				
+				
+			<h3>Resources and Communities</h3>
+				<ul>
+					<li><a href="https://www.w3schools.com/">W3Schools Online Web tutorials</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web Docs</a></li>
+					<li><a href="https://32bit.cafe/">32-Bit Cafe</a></li>
+					<li>You can ask me for help!</li>
+					<li>			<span style="
+        font-family: 'Unbounded', sans-serif;
+        color: black;
+        text-shadow: 0 0 5px #0f0, 0 0 10px #00ff00, 0 0 20px #007700;
+        display: inline-block;
+        position: relative;
+        animation: flicker 1.5s infinite alternate, glitch 0.3s infinite;
+    ">
+        ChatGPT
+    </span>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</li>
+				</ul>
+
+	</main>
+	
+</body>
+
+</html>
+
+<!-- This website was made in beautiful
+ ,ggg, ,ggggggg,                                                            
+dP""Y8,8P"""""Y8b                                                 ,dPYb,    
+Yb, `8dP'     `88                                                 IP'`Yb    
+ `"  88'       88                                                 I8  8I    
+     88        88                                                 I8  8bgg, 
+     88        88   ,ggg,   gg    gg    gg   ,gggg,gg   ,gggggg,  I8 dP" "8 
+     88        88  i8" "8i  I8    I8    88bgdP"  "Y8I   dP""""8I  I8d8bggP" 
+     88        88  I8, ,8I  I8    I8    8I i8'    ,8I  ,8'    8I  I8P' "Yb, 
+     88        Y8, `YbadP' ,d8,  ,d8,  ,8I,d8,   ,d8b,,dP     Y8,,d8    `Yb,
+     88        `Y8888P"Y888P""Y88P""Y88P" P"Y8888P"`Y88P      `Y888P      Y8 
+ ,gggggggggggg,                                                                             
+dP"""88""""""Y8b,          ,dPYb,                                                           
+Yb,  88       `8b,         IP'`Yb                                                           
+ `"  88        `8b         I8  8I                                                           
+     88         Y8         I8  8'                                                           
+     88         d8 ,ggg,   I8 dP    ,gggg,gg  gg    gg    gg   ,gggg,gg   ,gggggg,   ,ggg,  
+     88        ,8Pi8" "8i  I8dP    dP"  "Y8I  I8    I8    88bgdP"  "Y8I   dP""""8I  i8" "8i 
+     88       ,8P'I8, ,8I  I8P    i8'    ,8I  I8    I8    8I i8'    ,8I  ,8'    8I  I8, ,8I 
+     88______,dP' `YbadP' ,d8b,_ ,d8,   ,d8b,,d8,  ,d8,  ,8I,d8,   ,d8b,,dP     Y8, `YbadP' 
+    888888888P"  888P"Y8888P'"Y88P"Y8888P"`Y8P""Y88P""Y88P" P"Y8888P"`Y88P      `Y8888P"Y888
+    -->
