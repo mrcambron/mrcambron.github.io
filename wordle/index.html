@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Clone</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .grid-container { display: flex; flex-direction: column; align-items: center; gap: 5px; display: none; }
+        .grid { display: grid; grid-template-columns: repeat(5, 50px); gap: 5px; }
+        .cell { width: 50px; height: 50px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+        .correct { background-color: green; color: white; }
+        .present { background-color: orange; color: white; }
+        .absent { background-color: grey; color: white; }
+        .loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="loading-screen" id="loading">Loading...</div>
+    <h1>Wordle Clone</h1>
+    <div class="grid-container" id="board"></div>
+    <p id="message"></p>
+    <script>
+        let words = [];
+        let secretWord = "";
+        let currentRow = 0;
+        const maxAttempts = 6;
+        const startDate = new Date(2025, 2, 13); // March 13, 2025 (Month is zero-based in JS)
+        
+        fetch('wordlist.txt')
+            .then(response => {
+                if (!response.ok) throw new Error("Word list not found");
+                return response.text();
+            })
+            .then(text => {
+                words = text.split('\n').map(word => word.trim().toUpperCase()).filter(word => word.length === 5);
+                if (words.length > 0) {
+                    const today = new Date();
+                    const daysSinceStart = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+                    secretWord = words[daysSinceStart % words.length]; // Cycle through words
+                    console.log("Secret word:", secretWord);
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("board").style.display = "flex";
+                }
+            })
+            .catch(error => {
+                document.getElementById("loading").textContent = "Error: " + error.message;
+            });
+        
+        const board = document.getElementById("board");
+        for (let i = 0; i < maxAttempts; i++) {
+            const row = document.createElement("div");
+            row.classList.add("grid");
+            row.dataset.index = i;
+            for (let j = 0; j < 5; j++) {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                row.appendChild(cell);
+            }
+            board.appendChild(row);
+        }
+        
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") submitGuess();
+            else if (e.key === "Backspace") handleBackspace();
+            else if (/^[a-zA-Z]$/.test(e.key)) handleInput(e.key.toUpperCase());
+        });
+        
+        function handleInput(letter) {
+            const row = document.querySelector(`.grid[data-index='${currentRow}']`);
+            const cells = row.querySelectorAll(".cell");
+            for (let cell of cells) {
+                if (!cell.textContent) {
+                    cell.textContent = letter;
+                    break;
+                }
+            }
+        }
+        
+        function handleBackspace() {
+            const row = document.querySelector(`.grid[data-index='${currentRow}']`);
+            const cells = row.querySelectorAll(".cell");
+            for (let i = cells.length - 1; i >= 0; i--) {
+                if (cells[i].textContent) {
+                    cells[i].textContent = "";
+                    break;
+                }
+            }
+        }
+        
+        function submitGuess() {
+            if (!secretWord) {
+                document.getElementById("message").textContent = "Word list not loaded yet. Please wait.";
+                return;
+            }
+            
+            const row = document.querySelector(`.grid[data-index='${currentRow}']`);
+            const cells = row.querySelectorAll(".cell");
+            let guess = "";
+            
+            cells.forEach(cell => guess += cell.textContent);
+            if (guess.length !== 5) {
+                document.getElementById("message").textContent = "Invalid guess. Must be a 5-letter word.";
+                return;
+            }
+            
+            document.getElementById("message").textContent = "";
+            
+            for (let i = 0; i < 5; i++) {
+                if (guess[i] === secretWord[i]) {
+                    cells[i].classList.add("correct");
+                } else if (secretWord.includes(guess[i])) {
+                    cells[i].classList.add("present");
+                } else {
+                    cells[i].classList.add("absent");
+                }
+            }
+            
+            if (guess === secretWord) {
+                document.getElementById("message").textContent = "Congratulations! You guessed the word!";
+                document.removeEventListener("keydown", handleInput);
+            } else if (++currentRow >= maxAttempts) {
+                document.getElementById("message").textContent = `Game over! The word was ${secretWord}.`;
+                document.removeEventListener("keydown", handleInput);
+            }
+        }
+    </script>
+</body>
+</html>
