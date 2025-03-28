@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Drawing App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        .toolbar {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Map Drawing App</h1>
+    <div class="toolbar">
+        <button onclick="setTool('perimeter')">Draw Perimeter</button>
+        <button onclick="setTool('river')">Draw River</button>
+        <button onclick="setTool('mountain')">Draw Mountain</button>
+        <button onclick="setTool('forest')">Draw Forest</button>
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+    <canvas id="mapCanvas" width="800" height="600"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('mapCanvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+        let tool = 'perimeter';
+
+        function setTool(selectedTool) {
+            tool = selectedTool;
+        }
+
+        function startDrawing(event) {
+            drawing = true;
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX, event.offsetY);
+        }
+
+        function draw(event) {
+            if (!drawing) return;
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.strokeStyle = getToolColor(tool);
+            ctx.lineWidth = getToolWidth(tool);
+            ctx.stroke();
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            ctx.closePath();
+        }
+
+        function getToolColor(tool) {
+            switch (tool) {
+                case 'perimeter': return 'black';
+                case 'river': return 'blue';
+                case 'mountain': return 'gray';
+                case 'forest': return 'green';
+                default: return 'black';
+            }
+        }
+
+        function getToolWidth(tool) {
+            return tool === 'river' ? 3 : 2;
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, ca
